@@ -4,7 +4,7 @@
 \usepackage{indentfirst, hyperref, gensymb, amsmath, amsthm, wasysym, amsfonts, mathtools, braket, amssymb}
 \hypersetup{colorlinks,allcolors=blue,linktoc=all}
 
-\title{Chapter 1 Exercise Solutions}
+\title{Chapter 1 Section 1 Exercise Solutions}
 \author{Samuel Lair}
 \date{September 2022}
 
@@ -346,5 +346,33 @@ The truth value of "Fred is not happy or John is not happy" is $max(0.2, 0.6) = 
 
 \section{Exercise 52}
 "This statement is false" is not a proposition.  It is a declarative sentence but it doesn't have a definite truth value.  It is, in fact, a logical paradox. Regardless of whether you assume it is true or false, you reach a contradiction.
+
+\pagebreak
+
+\section{Exercise 53}
+\subsection{(a)}
+If we assume that the 100th statement is true, we reach a contradiction since we must conclude that the 100th statement is false. No contradiction is reached if the 100th statement is false. Therefore, the 100th statement is false, which implies that at least one of the statements are true.
+
+If we take $1 \le n \le 98$ and assume that the $n^{th}$ statement is true, we reach a contradiction. If the $n^{th}$ statement is true, then $100 - n$ statements must true. Since $100 - n > 1$, there must be true statements other than $n^{th}$ statement. However, if more than 1 statement is true, they will contradict each other. No contradiction is reached if we assume that the $n^{th}$ statement is false. Therefore, statements $1-98$ are be false.
+
+Now if we assume that the $99^{th}$ statement is false, we reach a contradiction in that all statements are false yet exactly 1 must be true. However, no contradiction is reached if we assume that the $99^{th}$ statement is true. Therefore, the 99th statement must be true.
+
+Hence, we conclude that the $99^{th}$ statement is true and the rest are false.
+
+\subsection{(b)}
+First of all, note that if the $n^{th}$ statement is true then all prior statements are true as well.
+
+If we assume that the $51^{st}$ statement is true, we reach a contradiction. If the $51^{st}$ statement is true, then statements $1-50$ must also be true. This leaves only statements $52-100$ available to be false. However, this is only a total of $49$ statements, contradicting the $51^{st}$ statement. Therefore, $51^{st}$ statement is false, which implies that statements $52-100$ are also false.
+
+If we assume that the $50^{th}$ statement is false, then we reach a contradiction where at least $50$ statements are false since statements $51-100$ must also be false.  We reach no contradiction if we assume that the $50^{th}$ statement is true. Therefore, the $50^{th}$ statement is true, which implies that statements $1-49$ are also true.
+
+Hence, we conclude that statements $1-50$ are true and statements $51-100$ are false.
+
+\subsection{(c)}
+If we assume that the $50^{th}$ statement is true, then we reach a contraction since statements $1-49$ must also be true leaving only statements $51-99$ available to be false.
+
+However, if we assume that the $50^{th}$ statement is false, then we reach a contraction where at $50$ statements are false since statements $51-99$ must also be false.
+
+Hence, we conclude that this system of statements represents an unsolvable logical paradox.
 
 \end{document}
