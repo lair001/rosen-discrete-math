@@ -98,4 +98,83 @@
 	\neg p \land r \implies q
 \]
 
+\pagebreak
+
+\section{Exercise 9}
+Let
+\begin{align*}
+	p & \Coloneqq \text{"The system is in multiuser state."} \\
+	q & \Coloneqq \text{"The system is operating normally."} \\
+	r & \Coloneqq \text{"The kernel is functioning."}        \\
+	s & \Coloneqq \text{"The system is in interrupt mode"}
+\end{align*}
+Then our system specifications can be expressed as the following system of logical expressions:
+\begin{align}
+	 & p \iff q \label{ex9eq1}          \\
+	 & q \implies r \label{ex9eq2}      \\
+	 & \neg r \lor s \label{ex9eq3}     \\
+	 & \neg p \implies s \label{ex9eq4} \\
+	 & \neg s \label{ex9eq5}
+\end{align}
+In order for \eqref{ex9eq5} to be true, $s$ must be false.  Since $s$ is false, $p$ must be true in order for \eqref{ex9eq4} to be true. Since $p$ is true, $q$ must be true in order for \eqref{ex9eq1} to be true. Since $q$ is true, $r$ must be true in order in order for \eqref{ex9eq2} to be true.  However, we must conclude that \eqref{ex9eq3} is false since $r$ is true and $s$ is false.
+
+Therefore, there is no assignment of truth values such that all of our logical expressions are true. Hence, our system specifications are inconsistent.
+
+\pagebreak
+
+\section{Exercise 10}
+Let
+\begin{align*}
+	p & \Coloneqq \text{"The system software is being upgraded."} \\
+	q & \Coloneqq \text{"Users can access the file system."}      \\
+	r & \Coloneqq \text{"Users can save new files"}
+\end{align*}
+Then our system specifications can be expressed as the following system of logical expressions:
+\begin{align}
+	p      & \implies \neg q \label{ex10eq1} \\
+	q      & \implies r \label{ex10eq2}      \\
+	\neg r & \implies \neg p \label{ex10eq3}
+\end{align}
+All of our logical expressions are true if we take $p = true$, $q = false$ and $r = true$. Hence, our system specifications are consistent.
+
+\pagebreak
+
+\section{Exercise 11}
+Let
+\begin{align*}
+	p & \Coloneqq \text{"The router can send packets to the edge system."} \\
+	q & \Coloneqq \text{"The router supports the new address space."}      \\
+	r & \Coloneqq \text{"The latest software release is installed."}
+\end{align*}
+Then our system specifications can be expressed as the following system of logical expressions:
+\begin{align}
+	 & p \implies q \label{ex11eq1} \\
+	 & q \implies r \label{ex11eq2} \\
+	 & r \implies p \label{ex11eq3} \\
+	 & \neg q \label{ex11eq4}
+\end{align}
+All of our logical expressions are true if we take $p = false$, $q = false$, and $r = false$. Hence, our system specifications are consistent.
+
+\pagebreak
+
+\section{Exercise 12}
+Let
+\begin{align*}
+	p & \Coloneqq \text{"The file system is locked."}                       \\
+	q & \Coloneqq \text{"New messages will be queued."}                     \\
+	r & \Coloneqq \text{"The system is functioning normally."}              \\
+	s & \Coloneqq \text{"New messages will be sent to the message buffer."}
+\end{align*}
+Then our system specifications can be expressed as the following system of logical expressions:
+\begin{align}
+	 & \neg p \implies q \label{ex12eq1} \\
+	 & \neg p \iff r \label{ex12eq2}     \\
+	 & \neg q \implies s \label{ex12eq3} \\
+	 & \neg p \implies s \label{ex12eq4} \\
+	 & \neg s \label{ex12eq5}
+\end{align}
+In order for \eqref{ex12eq5} to be true, s must be false. Since s is false, p must be true in order for \eqref{ex12eq4} to be true. Since s is false, q must be true in order for \eqref{ex12eq3} to be true. However, since p is false and q is false, we must conclude that \eqref{ex12eq1} is false.
+
+All of our logical expressions are true if we take $p = true$, $q = true$, $r = false$, and $s = false$. Hence, our system specifications are consistent.
+
 \end{document}
