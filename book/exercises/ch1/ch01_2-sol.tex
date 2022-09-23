@@ -177,4 +177,63 @@ In order for \eqref{ex12eq5} to be true, s must be false. Since s is false, p mu
 
 All of our logical expressions are true if we take $p = true$, $q = true$, $r = false$, and $s = false$. Hence, our system specifications are consistent.
 
+\pagebreak
+
+\section{Exercise 13}
+\subsection{(a)}
+beaches AND New AND Jersey
+\subsection{(b)}
+(beaches AND Jersey) NOT New
+
+\pagebreak
+
+\section{Exercise 14}
+\subsection{(a)}
+hiking AND West AND Virginia
+\subsection{(b)}
+(hiking AND Virginia) NOT West
+
+\pagebreak
+
+\section{Exercise 15}
+Ethiopian AND restaurant AND New AND (York OR Jersey)
+
+\pagebreak
+
+\section{Exercise 16}
+(men AND (shoes or boots)) NOT work
+
+\pagebreak
+
+\section{Exercise 17}
+\subsection{(a)}
+The statement that "All of the inscriptions are false" is equivalent to the propositional expression:
+\[
+	\neg p_3 \land \neg p_1 \land \neg (\neg p_3) \equiv \neg p_1 \land \neg p_3 \land p_3 \equiv \neg p_1 \land F \equiv F
+\]
+Therefore, the Queen who never lies cannot make this statement.
+
+\subsection{(b)}
+The statement that "Exactly one of the inscriptions is true" is equivalent to the propositional expression:
+\begin{align*}
+	 & (p_3 \land \neg p_1 \land \neg (\neg p_3)) \lor (\neg p_3 \land p_1 \land \neg (\neg p_3)) \lor (\neg p_3 \land \neg p_1 \land \neg p_3) & \equiv \\
+	 & (p_3 \land \neg p_1) \lor (\neg p_3 \land \neg p_1)
+\end{align*}
+The Queen who never lies could make this statement if the treasure is in either Trunk 3 or Trunk 2.
+
+\subsection{(b)}
+The statement that "Exactly two of the inscriptions are true" is equivalent to the propositional expression:
+\begin{align*}
+	 & (p_3 \land p_1 \land \neg (\neg p_3)) \lor (p_3 \land \neg p_1 \land \neg p_3) \lor (\neg p_3 \land p_1 \land \neg p3) & \equiv \\
+	 & (p_3 \land p_1) \lor (\neg p_3 \land p_1)
+\end{align*}
+The Queen who never lies could make this statement. If we assume that the treasure cannot be in multiple trunks, we can conclude that the treasure is in Trunk 1.
+
+\subsection{(d)}
+The statement that "All three inscriptions are true" is equivalent to the propositional expression:
+\begin{align*}
+	 & p_3 \land p_1 \land \neg p_3 \equiv p_1 \land p_3 \land \neg p_3 \equiv p_1 \land F \equiv F
+\end{align*}
+The Queen who never lies cannot make this statement.
+
 \end{document}
