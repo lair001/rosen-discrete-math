@@ -221,7 +221,7 @@ The statement that "Exactly one of the inscriptions is true" is equivalent to th
 \end{align*}
 The Queen who never lies could make this statement if the treasure is in either Trunk 3 or Trunk 2.
 
-\subsection{(b)}
+\subsection{(c)}
 The statement that "Exactly two of the inscriptions are true" is equivalent to the propositional expression:
 \begin{align*}
 	 & (p_3 \land p_1 \land \neg (\neg p_3)) \lor (p_3 \land \neg p_1 \land \neg p_3) \lor (\neg p_3 \land p_1 \land \neg p3) & \equiv \\
@@ -236,4 +236,148 @@ The statement that "All three inscriptions are true" is equivalent to the propos
 \end{align*}
 The Queen who never lies cannot make this statement.
 
+\pagebreak
+
+\section{Exercise 18}
+\subsection{(a)}
+The statement that "All of the inscriptions are false" is equivalent to the propositional expression:
+
+\[
+	\neg (\neg p_1) \land \neg p_1 \land \neg p_2 \equiv p_1 \land \neg p_1 \land \neg p_2 \equiv F \land \neg p_2 \equiv F
+\]
+Therefore, the Queen who never lies cannot make this statement.
+
+\subsection{(b)}
+The statement that "Exactly one of the inscriptions is true" is equivalent to the propositional expression:
+\begin{align*}
+	 & (\neg p_1 \land \neg p_1 \land \neg p_2) \lor (\neg (\neg p_1) \land p_1 \land \neg p_2) \lor (\neg (\neg p_1) \land \neg p_1 \land p_2) & \equiv \\
+	 & (\neg p_1 \land p_2) \lor (p_1 \land \neg p_2)
+\end{align*}
+The Queen who never lies could make this statement if the treasure is in either Trunk 2 or Trunk 1.
+
+\subsection{(c)}
+The statement that "Exactly two of the inscriptions are true" is equivalent to the propositional expression:
+\begin{align*}
+	 & (\neg p_1                                 & p_1 & \neg p_2) \lor (\neg p1 \land \neg p_1 \land p_2) \lor (\neg (\neg p1) \land p_1 \land p_2) & \equiv \\
+	 & (\neg p_1 \land p_2) \lor (p_1 \land p_2)
+\end{align*}
+The Queen who never lies could make this statement. If we assume that the treasure cannot be in multiple trunks, we can conclude that the treasure is in Trunk 2.
+
+\subsection{(d)}
+The statement that "All three inscriptions are true" is equivalent to the propositional expression:
+\[
+	\neg p_1 \land p_1 \land p_2 \equiv F \land p_2 \equiv F
+\]
+Therefore, the Queen who never lies cannot make this statement.
+
+\pagebreak
+
+\section{Exercise 23}
+Let
+\begin{align*}
+	 & p \Coloneqq \text{"A is a knight."} \\
+	 & q \Coloneqq \text{"B is a knight."}
+\end{align*}
+Then A's statement is equivalent to the propositional expression:
+\[
+	R \Coloneqq \neg p \lor \neg q
+\]
+
+First, let us consider the case where A is a knave. Then $\neg p$ is true and A's statement is false. We could informally reason that the negation of A's statement is "Neither of us is knave" or $p \land q$. However, let us try a more formal approach by applying De Morgan's Law for OR:
+
+\begin{align*}
+	 & \neg R                    & \equiv \\
+	 & \neg (\neg p \lor \neg q) & \equiv \\
+	 & p \land q
+\end{align*}
+Therefore, we've contradicted our assumption that $\neg p$ is true.
+
+Next, let us consider the case where A is a knight. Then $p$ is true and A's statement is true.  In order for $R$ to evaluate to true, $\neg q$ must be true. I.e. B is a knave.
+
+Hence, we conclude that A is a knight and B is a knave.
+
+\pagebreak
+
+\section{Exercise 24}
+The case where A is a knight is equivalent to the following system specifications:
+\begin{align*}
+	 & p                                      \\
+	 & p \land q                              \\
+	 & (\neg p \land q) \lor (p \land \neg q)
+\end{align*}
+These specifications are inconsistent.  In order for the first two expressions to be true, $p$ must be true and $q$ must be true. However, these truth value assignments result in the third expression evaluating to false.
+
+The case where A is a knave is equivalent to the following system specifications:
+\begin{align*}
+	 & \neg p                                     \\
+	 & \neg (p \land q) \equiv \neg p \lor \neg q \\
+	 & (\neg p \land q) \lor (p \land \neg q)
+\end{align*}
+These specifications are all satisfied for $p = F$ and $q = T$.
+
+Hence, we conclude that A is a knave and B is a knight.
+
+\pagebreak
+
+\section{Exercise 25}
+The case where A is a knight is equivalent to the following system specifications:
+\begin{align*}
+	 & p             \\
+	 & \neg p \lor q
+\end{align*}
+These specifications are all satisfied for $p = T$ and $q = T$.
+
+The case where A is a knave is equivalent to the following system specifications:
+\begin{align*}
+	 & \neg p                                     \\
+	 & \neg (\neg p \lor q) \equiv p \land \neg q
+\end{align*}
+These specifications are inconsistent. In order for the first expression to be true, $p$ must be false.  However, this truth value assignment results in the second expression evaluating to false regardless of the value for $q$.
+
+Hence, we conclude that A is a knight and B is a knight.
+
+\pagebreak
+
+\section{Exercise 26}
+Let $R$ be the logical expression equivalent to A's statement:
+\[
+	R \Coloneqq p
+\]
+
+Let $S$ be the logical expression equivalent to B's statement:
+\[
+	S \Coloneqq q
+\]
+
+This scenario is equivalent to the system specifications:
+\begin{align*}
+	 & (R \land p) \lor (\neg R \land \neg p) \equiv p \lor \neg p \equiv T \\
+	 & (S \land q) \lor (\neg S \land \neg q) \equiv q \lor \neg q \equiv T
+\end{align*}
+
+Any truth value assignment will satisfy all of the specifications.
+
+Hence, we conclude that we cannot draw any conclusions in this scenario. $A$ can be either a knight or a knave independent of the status of $B$. $B$ can be either a knight or a knave independent of the status of $A$.
+
+\pagebreak
+
+\section{Exercise 27}
+Let $R$ be the logical expression equivalent to A's statement:
+\[
+	\neg p \land \neg q
+\]
+
+This scenario is equivalent to the logical expression:
+\begin{align*}
+	 & (R \land p) \lor (\neg R \land \neg p)                                       & \equiv \\
+	 & (\neg p \land \neg q \land p) \lor (\neg (\neg p \land \neg q) \land \neg p) & \equiv \\
+	 & (p \land \neg p \land \neg q) \lor ((p \lor q) \land \neg p)                 & \equiv \\
+	 & (F \land \neg q) \lor ((\neg p \land p) \lor (\neg p \land q))               & \equiv \\
+	 & F \lor (\neg p \land q)                                                      & \equiv \\
+	 & \neg p \land q
+\end{align*}
+
+Hence, we conclude that A is a knave and B is a knight.
+
 \end{document}
+
