@@ -377,7 +377,69 @@ This scenario is equivalent to the logical expression:
 	 & \neg p \land q
 \end{align*}
 
-Hence, we conclude that A is a knave and B is a knight.
+Hence, we conclude that $A$ is a knave and $B$ is a knight.
+
+\pagebreak
+
+\section{Exercise 28}
+Brute forcing knight, knave, and spy problems using logical formalism can get quite complicated as we need at least 4 propositional variables to uniquely express who is the knight, who is the knave, and who is the spy. Therefore, for exercises 28-35, we'll try to simplify the problem by applying the constraints before possibly resorting to logical expressions.
+
+$B$ cannot be the knight since then we would have two knights.  If $C$ is the knight, then $C$'s statement would result in a contradiction.  Therefore, $C$ isn't the knight either. $A$ must the knight.
+
+Hence, we conclude that $A$ is the knight, $B$ is the spy, and $C$ is the knave.
+
+\pagebreak
+
+\section{Exercise 29}
+$C$ cannot be the knight since then we would have two knights.  If $B$ is the knight, then $B$'s statement would result in a contradiction. Therefore, $B$ isn't the knight either. $A$ must be the knight.
+Now suppose that $B$ is the knave. Then $B$'s statement would be false, resulting in a contradiction. Therefore, $B$ must be the spy.
+
+Hence, we conclude that $A$ is the knight, $B$ is the spy, and $C$ is the knave.
+
+\pagebreak
+
+\section{Exercise 30}
+This scenario is a paradox since it requires the knight to lie. I.e. there is no solution.
+
+\pagebreak
+
+\section{Exercise 31}
+If either $B$ or $C$ is the knight, then their respective statements results in a contradiction. $A$ must be the knight. Since this means that $B$'s statement is also true, $B$ must be the spy.
+
+Hence, we conclude that $A$ is the knight, $B$ is the spy, and $C$ is the knave.
+
+\pagebreak
+
+\section{Exercise 32}
+Suppose that $A$ is the knight. Then $B$'s statement is also true so $B$ is the spy. However, this also makes $C$'s statement true and we reach a contradiction since there is no knave. Therefore, $A$ isn't the knight.
+
+Suppose that $A$ is spy. Then B's statement is true so $B$ is the knight. However, this also makes $C$'s statement true and we reach a contradiction since there is no knave. Therefore, $A$ isn't the spy.
+
+Suppose that $A$ is the knave. Then B's statement is false so $B$ is the spy. $C$'s statement is true so $C$ is the knight.
+
+Hence, we conclude that $A$ is the knave, $B$ is the spy, and $C$ is the knight.
+
+\pagebreak
+
+\section{Exercise 33}
+These statements don't allow us to eliminate any solutions. I.e. all 6 permutations of knight, knave, and spy are possible in this scenario.
+
+\pagebreak
+
+\section{Exercise 34}
+Suppose that $C$ is the knight. Then $A$ is the spy and $B$ is the knave.
+
+Suppose that $C$ is the knave. Then C's statement is true, resulting in a contradiction.
+
+Suppose that $C$ is the spy. Then either $A$ or $B$ must be the knave. This results in a contradiction since the knave's statement is true.
+
+Hence, we conclude that $A$ is the spy, $B$ is the knave, and $C$ is the knight.
+
+\pagebreak
+
+\section{Exercise 35}
+This scenario is a paradox since it requires the knave to tell the truth. I.e. there is no solution.
+
 
 \end{document}
 
