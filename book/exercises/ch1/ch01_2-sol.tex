@@ -349,9 +349,9 @@ Let
 
 In order for noone to be unhappy, we must satisfy the following system specifications:
 \begin{align}
-	j &\implies \neg s \label{ex22eq1} \\
-	s &\implies k \label{ex22eq2}      \\
-	\neg j &\implies \neg k \label{ex22eq3}
+	j      & \implies \neg s \label{ex22eq1} \\
+	s      & \implies k \label{ex22eq2}      \\
+	\neg j & \implies \neg k \label{ex22eq3}
 \end{align}
 
 Suppose that Jasmine attends. From \eqref{ex22eq1}, Samir cannot also attend. Our specifications are satisfied regardless of whether Kanti attends.
@@ -530,6 +530,70 @@ Hence, we conclude that $A$ is the spy, $B$ is the knave, and $C$ is the knight.
 \section{Exercise 35}
 This scenario is a paradox since it requires the knave to tell the truth. I.e. there is no solution.
 
+\pagebreak
+
+\section{Exercise 37}
+Let
+\begin{align*}
+	f & \Coloneqq \text{"Fred is the highest paid."}   \\
+	j & \Coloneqq \text{"Janice is the highest paid."} \\
+	k & \Coloneqq \text{"Janice is the lowest paid."}  \\
+	m & \Coloneqq \text{"Maggie is the highest paid."}
+\end{align*}
+
+Then the known facts are equivalent to the following system specifications:
+\begin{align}
+	j      & \implies \neg k \label{ex37eq1} \\
+	k      & \implies \neg j \label{ex37eq2} \\
+	f      & \implies \neg j \label{ex37eq3} \\
+	f      & \implies \neg m \label{ex37eq4} \\
+	j      & \implies \neg f \label{ex37eq5} \\
+	j      & \implies \neg m \label{ex37eq6} \\
+	m      & \implies \neg f \label{ex37eq7} \\
+	m      & \implies \neg j \label{ex37eq8} \\
+	\neg f & \implies j \label{ex37eq9}      \\
+	\neg k & \implies m \label{ex37eq10}
+\end{align}
+
+Suppose that $f = T$. From \eqref{ex37eq3}, $j = F$. From \eqref{ex37eq4}, $m = F$. From \eqref{ex37eq10}, $k = T$. Therefore, Fred > Maggie > Janice in this case.
+
+Suppose that $f = F$. From \eqref{ex37eq9}, $j = T$. From \eqref{ex37eq1}, $k = F$. From \eqref{ex37eq10}, $m = T$. However, this contradicts both \eqref{ex37eq6} and \eqref{ex37eq8}. I.e. Janice and Maggie cannot both be the highest paid.
+
+Hence, we conclude that Fred is the highest paid, Janice is the lowest paid, and Maggie's pay is between that of Fred and Janice.
+
+\pagebreak
+
+\section{Exercise 39}
+Let
+\begin{align*}
+	b & \Coloneqq \text{"The butler is telling the truth."}   \\
+	c & \Coloneqq \text{"The cook is telling the truth."}     \\
+	g & \Coloneqq \text{"The gardener is telling the truth."} \\
+	h & \Coloneqq \text{"The handyman is telling the truth."}
+\end{align*}
+
+Our facts are equivalent to the following system specifications:
+\begin{align}
+	b      & \implies c \label{ex39eq1}      \\
+	c      & \implies \neg g \label{ex39eq2} \\
+	g      & \implies \neg c \label{ex39eq3} \\
+	\neg g & \implies h \label{ex39eq4}      \\
+	\neg h & \implies g \label{ex39eq5}      \\
+	h      & \implies \neg c \label{ex39eq6}
+\end{align}
+
+Suppose that $b = T$. From \eqref{ex39eq1}, $c = T$.  From \eqref{ex39eq2}, $g = F$.  From \eqref{ex39eq4}, $h = T$. However, \eqref{ex39eq6} leads us to a contradiction where $c = F$.
+
+Suppose that $b = F$.  We must also take $c = F$ to avoid the previous contradiction.  If we take $g = T$, $h$ can be either true or false without reaching a contradiction.  If we take $g = F$, then \eqref{ex39eq4} requires that $h = T$.  This doesn't lead to any contradictions either.
+
+Hence, we can conclude that the butler and cook are lying. However, we cannot determine whether the gardener is telling the truth or whether the handyman is telling the truth.
+
+\pagebreak
+
+\section{Exercise 41}
+If the sign on the first door is true, then the sign on the second door is true as well. Since we know that exactly one sign is true, the sign on the first door must be false and the sign on the second door must be true.
+
+Hence, the lady is in the second room and the tiger is in the first room.
 
 \end{document}
 
