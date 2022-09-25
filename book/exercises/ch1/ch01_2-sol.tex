@@ -563,6 +563,34 @@ Hence, we conclude that Fred is the highest paid, Janice is the lowest paid, and
 
 \pagebreak
 
+\section{Exercise 38}
+Let
+\begin{align*}
+	k & \Coloneqq \text{"Kevin is chatting."}   \\
+	h & \Coloneqq \text{"Heather is chatting."} \\
+	r & \Coloneqq \text{"Randy is chatting."}   \\
+	v & \Coloneqq \text{"Vijay is chatting."}   \\
+	a & \Coloneqq \text{"Abby is chatting."}
+\end{align*}
+
+Our scenario is equivalent to the following system specifications:
+
+\begin{align}
+	 & k \lor h \label{ex38eq1}             \\
+	 & r \oplus v \label{ex38eq2}           \\
+	 & a \implies r \label{ex38eq3}         \\
+	 & v \iff k \label{ex38eq4}             \\
+	 & h \implies a \land k \label{ex38eq5}
+\end{align}
+
+Suppose that $v = T$. From \eqref{ex38eq4}, $k = T$. From \eqref{ex38eq2}, $r = F$. From \eqref{ex38eq3}, $a = F$. From \eqref{ex38eq5}, $h = F$. $\eqref{ex38eq1} = T$ since $k = T$.
+
+Suppose that $v = F$. From \eqref{ex38eq4}, $k = F$. From \eqref{ex38eq5}, $h = F$.  However, this a contradiction since $\eqref{ex38eq1} = F$.
+
+Hence, we conclude that Kevin and Vijay are chatting while Heather, Randy and Abby are not chatting.
+
+\pagebreak
+
 \section{Exercise 39}
 Let
 \begin{align*}
@@ -590,10 +618,65 @@ Hence, we can conclude that the butler and cook are lying. However, we cannot de
 
 \pagebreak
 
+\section{Exercise 40}
+
+\subsection{(a)}
+
+Suppose Alice is telling the truth. Then we reach a contradiction where John is also telling the truth.
+
+Suppose that John is telling the truth. Then we reach a contradiction where either Carlos or Diana is also telling the truth. Since we can conclude that John's statement is false, we now know that he did it. However, let's also see if we can figure out who is telling the truth.
+
+Suppose that Carlos is telling the truth. This contradicts the fact that John's statement is false.
+
+Suppose that Diana is telling the truth. There is no contradiction in this case.
+
+Therefore, Diana is telling the truth while the other three are lying. Hence, we conclude that John accessed the computer system without authorization since his statement is false.
+
+\subsection{(b)}
+Alice's and Carlos's statements cannot both be true since they implicate different people. Also, if Diana's statement is true, then Carlos's statement is false.
+
+Suppose that Carlos's statement is true. Then we reach a contradiction where both Alice's and Diana's statements are false. Therefore, Carlos's statement is false while the other three are true.
+
+Hence, we conclude that Carlos accessed the computer system without authorization since Alice's statement is true.
+
+\pagebreak
+
 \section{Exercise 41}
 If the sign on the first door is true, then the sign on the second door is true as well. Since we know that exactly one sign is true, the sign on the first door must be false and the sign on the second door must be true.
 
 Hence, the lady is in the second room and the tiger is in the first room.
+
+\pagebreak
+
+\section{Exercise 43}
+If more than one senator is honest, then there exists a pair of senators such that both are honest (i.e. neither is corrupt). This contradicts the requirement that "given any two Freedonian senators, at least one is corrupt."
+
+Hence we conclude that one senator is honest and the other 49 are corrupt.
+
+\pagebreak
+
+\section{Exercise 44}
+\subsection{(a)}
+\[
+	\neg p \lor \neg q
+\]
+\subsection{(b)}
+\[
+	\neg (p \lor (\neg p \land q))
+\]
+
+\pagebreak
+
+\section{Exercise 45}
+\subsection{(a)}
+\[
+	\neg (p \land (q \lor \neg r))
+\]
+
+\subsection{(b)}
+\[
+	(\neg p \land \neg q) \lor (p \land r)
+\]
 
 \end{document}
 
