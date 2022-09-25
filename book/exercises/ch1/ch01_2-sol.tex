@@ -272,6 +272,96 @@ Therefore, the Queen who never lies cannot make this statement.
 
 \pagebreak
 
+\section{Exercise 19}
+Let
+\begin{align*}
+	p & \Coloneqq \text{"The left fork leads to the ruins."}    \\
+	q & \Coloneqq \text{"The villager always tells the truth."}
+\end{align*}
+
+Suppose we ask a straightfoward question like:
+\begin{equation}\label{ex19eq1}
+	\text{"Does the left fork lead to the ruins?"}
+\end{equation}
+
+This question is equivalent to the following propositional expression:
+\begin{equation}\label{ex19eq1p}
+	(p \land q) \lor (\neg p \land \neg q)
+\end{equation}
+
+In other words, the truth table for \eqref{ex19eq1} is as follows:
+\[
+	\begin{array}{|c|c|c|}
+		p & q & \eqref{ex19eq1p} \\
+		\hline
+		T & T & T                \\
+		T & F & F                \\
+		F & T & F                \\
+		F & F & T
+	\end{array}
+\]
+
+This is problematic since we want the truth value of our question to match the truth value of p regardless of the truth value of q. We can achieve this by making the liar lie about his answer to \eqref{ex19eq1}. Due to the double negation rule, a lie about a lie will be equal to the truth.  Therefore, the question we will actually ask is:
+
+\begin{equation}\label{ex19eq2}
+	\text{"If I were to ask you about whether the left fork leads to the ruins, would you say yes?"}
+\end{equation}
+
+The truth table for \eqref{ex19eq2} is as follows:
+\[
+	\begin{array}{|c|c|r c|}
+		p & q &                             & \eqref{ex19eq2} \\
+		\hline
+		T & T & \eqref{ex19eq1} \equiv      & T               \\
+		T & F & \neg \eqref{ex19eq1} \equiv & T               \\
+		F & T & \eqref{ex19eq1} \equiv      & F               \\
+		F & F & \neg \eqref{ex19eq1} \equiv & F
+	\end{array}
+\]
+
+The truth value of \eqref{ex19eq2} matches $p$ as desired, allowing us to infer which fork leads to the ruins.
+
+\pagebreak
+
+\section{Exercise 20}
+\subsection{(a)}
+The question "Are you a liar?" does not work because both types of cannibals will answer no. The cannibals who always tell the truth will answer no because that is the truth. The cannibals who always lie will answer no because that is the lie.
+
+\subsection{(b)}
+Similar to Exercise 19, the explorer needs to make the liars lie about a lie. Therefore, the explorer should ask: "If I were to ask you whether you are a liar, would you say yes?"
+
+\pagebreak
+
+\section{Exercise 21}
+From the first professor's response, we can infer that he wants coffee but does not know whether the other two professors want coffee.  From the second professor's response, we can infer that he wants coffee but does not know whether the third professor wants coffee. From the third professor's response, we can infer that he does not want coffee.
+
+Therefore, the hostess gives coffee to the first and second professors.
+
+\pagebreak
+
+\section{Exercise 22}
+Let
+\begin{align*}
+	j & \Coloneqq \text{"Jasmine attends."} \\
+	s & \Coloneqq \text{"Samir attends."}   \\
+	k & \Coloneqq \text{"Kanti attends."}
+\end{align*}
+
+In order for noone to be unhappy, we must satisfy the following system specifications:
+\begin{align}
+	j &\implies \neg s \label{ex22eq1} \\
+	s &\implies k \label{ex22eq2}      \\
+	\neg j &\implies \neg k \label{ex22eq3}
+\end{align}
+
+Suppose that Jasmine attends. From \eqref{ex22eq1}, Samir cannot also attend. Our specifications are satisfied regardless of whether Kanti attends.
+
+Now suppose that Jasmine doesn't attend. From \eqref{ex22eq3}, Kanti also doesn't attend. Finally, from \eqref{ex22eq2}, Samir also doesn't attend.
+
+Hence, we can invite either Jasmine alone, both Jasmine and Kanti, or none of the three.
+
+\pagebreak
+
 \section{Exercise 23}
 Let
 \begin{align*}
