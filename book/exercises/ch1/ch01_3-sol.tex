@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst, hyperref, gensymb, amsmath, amsthm, wasysym, amsfonts, mathtools, braket, amssymb}
+\hypersetup{colorlinks,allcolors=blue,linktoc=all}
+
+\title{Chapter 1 Section 3 Exercise Solutions}
+\author{Samuel Lair}
+\date{September 2022}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\pagebreak
+
+\section{Exercise 5}
+\[
+	\begin{array}{|c|c|c|c|c|c|c|c|}
+		p & q & r & q \lor r & p \land (q \lor r) & p \land q & p \land r & (p \land q) \lor (p \land r) \\
+		\hline
+		T & T & T & T        & T                  & T         & T         & T                            \\
+		T & T & F & T        & T                  & T         & F         & T                            \\
+		T & F & T & T        & T                  & F         & T         & T                            \\
+		T & F & F & F        & F                  & F         & F         & F                            \\
+		F & T & T & T        & F                  & F         & F         & F                            \\
+		F & T & F & T        & F                  & F         & F         & F                            \\
+		F & F & T & T        & F                  & F         & F         & F                            \\
+		F & F & F & F        & F                  & F         & F         & F
+	\end{array}
+\]
+
+Since the truth values of the compound propositions $p \land (q \lor r)$ and $(p \land q) \lor (p \land r)$ agree for all possible combinations of the truth values of $p$, $q$, and $r$, said compound propositions are logically equivalent.
+
+\section{Exercise 6}
+\[
+	\begin{array}{|c|c|c|c|c|c|c|}
+		p & q & p \land q & \neg (p \land q) & \neg p & \neg q & \neg p \lor \neg q \\
+		\hline
+		T & T & T         & F                & F      & F      & F                  \\
+		T & F & F         & T                & F      & T      & T                  \\
+		F & T & F         & T                & T      & F      & T                  \\
+		F & F & F         & T                & T      & T      & T
+	\end{array}
+\]
+
+Since the truth values of the compound propositions $\neg (p \land q)$ and $\neg p \lor \neg q$ agree for all possible combinations of the truth values of $p$ and $q$, said compound propositions are logically equivalent.
+
+\pagebreak
+
+\section{Exercise 9}
+
+\subsection{(a)}
+\begin{align*}
+	     & p \implies \neg q & \equiv \\
+	\neg & p \lor \neg q
+\end{align*}
+
+\subsection{(b)}
+\begin{align*}
+	     & (p \implies q) \implies r & \equiv \\
+	\neg & (p \implies q) \lor r     & \equiv \\
+	\neg & (\neg p \lor q) \lor r    & \equiv \\
+	     & (p \land \neg q) \lor r
+\end{align*}
+
+\subsection{(c)}
+\begin{align*}
+	     & (\neg q \implies p) \implies (p \implies \neg q) & \equiv \\
+	\neg & (\neg q \implies p) \lor (p \implies \neg q)     & \equiv \\
+	\neg & (q \lor p) \lor (\neg p \lor \neg q)             & \equiv \\
+	     & (\neg q \land \neg p) \lor (\neg p \lor \neg q)  & \equiv \\
+	     & (\neg p \land \neg q) \lor (\neg p \lor \neg q)  & \equiv \\
+	     & ((\neg p \land \neg q) \lor \neg p) \lor \neg q  & \equiv \\
+	     & (\neg p \lor (\neg p \land \neg q)) \lor \neg q  & \equiv \\
+	\neg & p \lor \neg q
+\end{align*}
+
+\pagebreak
+
+\section{Exercise 10}
+
+\subsection{(a)}
+\begin{align*}
+	\neg       & p \implies \neg q & \equiv \\
+	\neg (\neg & p) \lor \neg q    & \equiv \\
+	           & p \lor \neg q
+\end{align*}
+
+\subsection{(b)}
+\begin{align*}
+	       & p \lor q \implies \neg p     & \equiv \\
+	\neg ( & p \lor q) \lor \neg p        & \equiv \\
+	(\neg  & p \land \neg q) \lor \neg p  & \equiv \\
+	\neg   & p \lor (\neg p \land \neg q) & \equiv \\
+	\neg   & p
+\end{align*}
+
+\subsection{(c)}
+\begin{align*}
+	(          & p \implies \neg q) \implies (\neg p \implies q) & \equiv \\
+	\neg (     & p \implies \neg q) \lor (\neg p \implies q)     & \equiv \\
+	\neg (\neg & p \lor \neg q) \lor (p \lor q)                  & \equiv \\
+	(          & p \land q) \lor (p \lor q)                      & \equiv \\
+	((         & p \land q) \lor p) \lor q                       & \equiv \\
+	(          & p \lor (p \land q)) \lor q                      & \equiv \\
+	           & p \lor q
+\end{align*}
+
+\end{document}
