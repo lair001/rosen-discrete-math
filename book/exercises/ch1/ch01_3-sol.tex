@@ -108,4 +108,137 @@ Since the truth values of the compound propositions $\neg (p \land q)$ and $\neg
 	           & p \lor q
 \end{align*}
 
+\pagebreak
+
+\section{Exercise 15}
+
+\subsection{(a)}
+\begin{align*}
+	      & (p \land q) \implies p & \equiv \\
+	\neg  & (p \land q) \lor p     & \equiv \\
+	(\neg & p \lor \neg q) \lor p  & \equiv \\
+	\neg  & q \lor (p \lor \neg p) & \equiv \\
+	\neg  & q \lor T               & \equiv \\
+	      & T
+\end{align*}
+
+\subsection{(b)}
+\begin{align*}
+	     & p \implies (p \lor q)  & \equiv \\
+	\neg & p \lor (p \lor q)      & \equiv \\
+	     & q \lor (p \lor \neg p) & \equiv \\
+	     & q \lor T               & \equiv \\
+	     & T
+\end{align*}
+
+\subsection{(c)}
+\begin{align*}
+	\neg & p \implies (p \implies q)  & \equiv \\
+	\neg & p \implies (\neg p \lor q) & \equiv \\
+	     & p \lor (\neg p \lor q)     & \equiv \\
+	     & q \lor (p \lor \neg p)     & \equiv \\
+	     & q \lor T                   & \equiv \\
+	     & T
+\end{align*}
+
+\subsection{(d)}
+\begin{align*}
+	(      & p \land q) \implies (p \implies q)  & \equiv \\
+	(      & p \land q) \implies (\neg p \lor q) & \equiv \\
+	\neg ( & p \land q) \lor (\neg p \lor q)     & \equiv \\
+	(\neg  & p \lor \neg q) \lor (\neg p \lor q) & \equiv \\
+	(\neg  & p \lor \neg p) \lor (q \lor \neg q) & \equiv \\
+	\neg   & p \lor T                            & \equiv \\
+	       & T
+\end{align*}
+
+\subsection{(e)}
+\begin{align*}
+	\neg(     & p \implies q) \implies p & \equiv \\
+	\neg(\neg & p \lor q) \implies p     & \equiv \\
+	(\neg     & p \lor q) \lor p         & \equiv \\
+	          & q \lor (p \lor \neg p)   & \equiv \\
+	          & q \lor T                 & \equiv \\
+	          & T
+\end{align*}
+
+\subsection{(f)}
+\begin{align*}
+	\neg(     & p \implies q) \implies \neg q & \equiv \\
+	\neg(\neg & p \lor q) \implies \neg q     & \equiv \\
+	(\neg     & p \lor q) \lor \neg q         & \equiv \\
+	\neg      & p \lor (q \lor \neg q)        & \equiv \\
+	\neg      & p \lor T                      & \equiv \\
+	          & T
+\end{align*}
+
+\pagebreak
+
+\section{Exercise 16}
+\subsection{(a)}
+\begin{align*}
+	[\neg      & p \land (p \lor q)] \implies q                         & \equiv \\
+	\neg [\neg & p \land (p \lor q)] \lor q                             & \equiv \\
+	           & p \lor \neg (p \lor q) \lor q                          & \equiv \\
+	           & p \lor (\neg p \land \neg q) \lor q                    & \equiv \\
+	(          & p \lor q) \lor (\neg p \land \neg q)                   & \equiv \\
+	((         & p \lor q) \lor \neg p) \land ((p \lor q) \lor \neg q)  & \equiv \\
+	(          & q \lor (p \lor \neg p)) \land (p \lor (q \lor \neg q)) & \equiv \\
+	(          & q \lor T) \land (p \lor T)                             & \equiv \\
+	           & T \land T                                              & \equiv \\
+	           & T
+\end{align*}
+
+\subsection{(b)}
+\begin{align*}
+	[(          & p \implies q) \land (q \implies r)] \implies (p \implies r)                         & \equiv \\
+	\neg [(     & p \implies q) \land (q \implies r)] \lor (p \implies r)                             & \equiv \\
+	\neg [(\neg & p \lor q) \land (\neg q \lor r)] \lor (\neg p \lor r)                               & \equiv \\
+	[\neg(\neg  & p \lor q) \lor \neg (\neg q \lor r)] \lor (\neg p \lor r)                           & \equiv \\
+	[(          & p \land \neg q) \lor (q \land \neg r)] \lor (\neg p \lor r)                         & \equiv \\
+	[((         & p \land \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)] \lor (\neg p \lor r)  & \equiv \\
+	[(          & p \land (q \land \neg q)) \lor ((p \lor \neg q) \land \neg r)] \lor (\neg p \lor r) & \equiv \\
+	[(          & p \land F) \lor (\neg r \land (p \lor \neg q))] \lor (\neg p \lor r)                & \equiv \\
+	[           & F \lor ((\neg r \land p) \lor (\neg r \land \neg q))] \lor (\neg p \lor r)          & \equiv \\
+	((\neg      & r \land p) \lor (\neg r \land \neg q)) \lor (\neg p \lor r)                         & \equiv \\
+	((\neg      & p \lor r) \lor (\neg r \land p)) \lor (\neg r \land \neg q)                         & \equiv \\
+	(((\neg     & p \lor r) \lor \neg r) \land ((\neg p \lor r) \lor p)) \lor (\neg r \land \neg q)   & \equiv \\
+	((\neg      & p \lor T) \land (r \lor T)) \lor (\neg r \land \neg q)                              & \equiv \\
+	(           & T \land T) \lor (\neg r \land \neg q)                                               & \equiv \\
+	(\neg       & r \land \neg q) \lor T                                                              & \equiv \\
+	            & T
+\end{align*}
+
+\subsection{(c)}
+\begin{align*}
+	[       & p \land (p \implies q)] \implies q                     & \equiv \\
+	\neg [  & p \land (\neg p \lor q)] \lor q                        & \equiv \\
+	[\neg   & p \lor \neg (\neg p \lor q)] \lor q                    & \equiv \\
+	[\neg   & p \lor (p \land \neg q)] \lor q                        & \equiv \\
+	(\neg   & p \lor q) \lor (p \land \neg q)                        & \equiv \\
+	[((\neg & p \lor q) \lor p) \land ((\neg p \lor q) \lor \neg q)] & \equiv \\
+	[(      & q \lor T) \land (\neg p \lor T)]                       & \equiv \\
+	        & T \land T \equiv                                                \\
+	        & T
+\end{align*}
+
+\subsection{(d)}
+\begin{align*}
+	[(      & p \lor q) \land (p \implies r) \land (q \implies r)] \implies r                & \equiv \\
+	\neg [( & p \lor q) \land (\neg p \lor r) \land (\neg q \lor r)] \lor r                  & \equiv \\
+	[\neg ( & p \lor q) \lor \neg (\neg p \lor r) \lor \neg (\neg q \lor r)] \lor r          & \equiv \\
+	[(\neg  & p \land \neg q) \lor (p \land \neg r) \lor (q \land \neg r)] \lor r            & \equiv \\
+	[(\neg  & p \land \neg q) \lor (p \land \neg r)] \lor [r \lor (q \land \neg r)]          & \equiv \\
+	[(\neg  & p \land \neg q) \lor (p \land \neg r)] \lor [(r \lor q) \land (r \lor \neg r)] & \equiv \\
+	[(\neg  & p \land \neg q) \lor (p \land \neg r)] \lor (r \lor q)                         & \equiv \\
+	[(      & r \lor q) \lor (\neg p \land \neg q)] \lor (p \land \neg r)                    & \equiv \\
+	[((     & r \lor q) \lor \neg p) \land ((r \lor q) \lor \neg q)] \lor (p \land \neg r)   & \equiv \\
+	((      & r \lor q) \lor \neg p) \lor (p \land \neg r)                                   & \equiv \\
+	(((     & r \lor q) \lor \neg p) \lor p) \land (((r \lor q) \lor \neg p) \lor \neg r)    & \equiv \\
+	((      & r \lor q) \lor (p \lor \neg p)) \land ((\neg p \lor q) \lor (r \lor \neg r))   & \equiv \\
+	((      & r \lor q) \lor T) \land ((\neg p \lor q) \lor T)                               & \equiv \\
+	        & T \land T                                                                      & \equiv \\
+	        & T
+\end{align*}
+
 \end{document}
