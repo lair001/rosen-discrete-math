@@ -4,6 +4,9 @@
 \usepackage{indentfirst, hyperref, gensymb, amsmath, amsthm, wasysym, amsfonts, mathtools, braket, amssymb}
 \hypersetup{colorlinks,allcolors=blue,linktoc=all}
 
+\let\biconditional\leftrightarrow
+\let\conditional\rightarrow
+
 \title{Chapter 1 Section 3 Exercise Solutions}
 \author{Samuel Lair}
 \date{September 2022}
@@ -238,6 +241,208 @@ Since the truth values of the compound propositions $\neg (p \land q)$ and $\neg
 	((      & r \lor q) \lor (p \lor \neg p)) \land ((\neg p \lor q) \lor (r \lor \neg r))   & \equiv \\
 	((      & r \lor q) \lor T) \land ((\neg p \lor q) \lor T)                               & \equiv \\
 	        & T \land T                                                                      & \equiv \\
+	        & T
+\end{align*}
+
+\pagebreak
+
+\section{Exercise 17}
+
+\subsection{(a)}
+\[
+	\begin{array}{|c|c|c|c|}
+		p          & q & p \land q & p \lor (p \land q) \\
+		\hline
+		\textbf{T} & T & T         & \textbf{T}         \\
+		\textbf{T} & F & F         & \textbf{T}         \\
+		\textbf{F} & T & F         & \textbf{F}         \\
+		\textbf{F} & F & F         & \textbf{F}
+	\end{array}
+\]
+
+Since the truth values of $p \lor (p \land q)$ and $p$ agree for all possible combinations of truth values for $p$ and $q$, $p \lor (p \land q)$ and $p$ are logically equivalent. I.e. $p \lor (p \land q) \equiv p$ is true.
+
+\subsection{(b)}
+\[
+	\begin{array}{|c|c|c|c|}
+		p          & q & p \lor q & p \land (p \lor q) \\
+		\hline
+		\textbf{T} & T & T        & \textbf{T}         \\
+		\textbf{T} & F & T        & \textbf{T}         \\
+		\textbf{F} & T & T        & \textbf{F}         \\
+		\textbf{F} & F & F        & \textbf{F}
+	\end{array}
+\]
+
+Since the truth values of $p \land (p \lor q)$ and $p$ agree for all possible combinations of truth values for $p$ and $q$, $p \land (p \lor q)$ and $p$ are logically equivalent. I.e. $p \land (p \lor q) \equiv p$ is true.
+
+\pagebreak
+
+\section{Exercise 18}
+
+\begin{align*}
+	(\neg      & p \land (p \conditional q)) \conditional \neg q & \equiv \\
+	\neg (\neg & p \land (\neg p \lor q)) \lor \neg q            & \equiv \\
+	(          & p \lor \neg (\neg p \lor q)) \lor \neg q        & \equiv \\
+	(          & p \lor (p \land \neg q)) \lor \neg q            & \equiv \\
+	           & p \lor \neg q                                   & \equiv \\
+	\neg       & p \conditional \neg q
+\end{align*}
+
+Hence, $(\neg p \land (p \conditional q)) \conditional \neg q$ is not a tautology.
+
+\pagebreak
+
+\section{Exercise 19}
+
+\begin{align*}
+	(\neg      & q \land (p \conditional q)) \conditional \neg q & \equiv \\
+	\neg (\neg & q \land (\neg p \lor q)) \lor \neg q            & \equiv \\
+	(          & q \lor \neg (\neg p \lor q)) \lor \neg q        & \equiv \\
+	(          & q \lor (p \land \neg q)) \lor \neg q            & \equiv \\
+	(          & p \land \neg q) \lor (q \lor \neg q)            & \equiv \\
+	(          & p \land \neg q) \lor T                          & \equiv \\
+	           & T
+\end{align*}
+
+Hence, $(\neg q \land (p \conditional q)) \conditional \neg q$ is a tautology.
+
+\pagebreak
+
+\section{Exercise 20}
+Let
+\begin{align}
+	  & p \biconditional q \label{ex20eq1}                    \\
+	( & p \land q) \lor (\neg p \land \neg q) \label{ex20eq2}
+\end{align}
+
+\[
+	\begin{array}{|c|c|c|c|c|c|}
+		p & q & \eqref{ex20eq1} & p \land q & \neg p \land \neg q & \eqref{ex20eq2} \\
+		\hline
+		T & T & \textbf{T}      & T         & F                   & \textbf{T}      \\
+		T & F & \textbf{F}      & F         & F                   & \textbf{F}      \\
+		F & T & \textbf{F}      & F         & F                   & \textbf{F}      \\
+		F & F & \textbf{T}      & F         & T                   & \textbf{T}
+	\end{array}
+\]
+
+Since the truth values of \eqref{ex20eq1} and \eqref{ex20eq2} agree for all possible combinations of truth values for $p$ and $q$, \eqref{ex20eq1} and \eqref{ex20eq2} are logically equivalent.
+
+\pagebreak
+
+\section{Exercise 21}
+Let
+\begin{align}
+	\neg ( & p \biconditional q) \label{ex21eq1}     \\
+	       & p \biconditional \neg q \label{ex21eq2}
+\end{align}
+
+\[
+	\begin{array}{|c|c|c|c|c|c|}
+		p & q & p \biconditional q & \eqref{ex21eq1} & \neg q & \eqref{ex21eq2} \\
+		\hline
+		T & T & T                  & \textbf{F}      & F      & \textbf{F}      \\
+		T & F & F                  & \textbf{T}      & T      & \textbf{T}      \\
+		F & T & F                  & \textbf{T}      & F      & \textbf{T}      \\
+		F & F & T                  & \textbf{F}      & T      & \textbf{F}
+	\end{array}
+\]
+
+Since the truth values of \eqref{ex21eq1} and \eqref{ex21eq2} agree for all possible combinations of truth values for $p$ and $q$, \eqref{ex21eq1} and \eqref{ex21eq2} are logically equivalent.
+
+\pagebreak
+
+\section{Exercise 22}
+Let
+\begin{align}
+	     & p \conditional q \label{ex22eq1}      \\
+	\neg & q \conditional \neg p \label{ex22eq2}
+\end{align}
+
+\[
+	\begin{array}{|c|c|c|c|c|c|}
+		p & q & \eqref{ex22eq1} & \neg q & \neg p & \eqref{ex22eq2} \\
+		\hline
+		T & T & \textbf{T}      & F      & F      & \textbf{T}      \\
+		T & F & \textbf{F}      & T      & F      & \textbf{F}      \\
+		F & T & \textbf{T}      & F      & T      & \textbf{T}      \\
+		F & F & \textbf{T}      & T      & T      & \textbf{T}
+	\end{array}
+\]
+
+Since the truth values of \eqref{ex22eq1} and \eqref{ex22eq2} agree for all possible combinations of truth values for $p$ and $q$, \eqref{ex22eq1} and \eqref{ex22eq2} are logically equivalent.
+
+\pagebreak
+\section{Exercise 23}
+Let
+\begin{align}
+	\neg & p \biconditional q \label{ex23eq1}      \\
+	     & p \biconditional \neg q \label{ex23eq2}
+\end{align}
+
+\[
+	\begin{array}{|c|c|c|c|c|c|}
+		p & q & \neg p & \eqref{ex23eq1} & \neg q & \eqref{ex23eq2} \\
+		\hline
+		T & T & F      & F               & F      & F               \\
+		T & F & F      & T               & T      & T               \\
+		F & T & T      & T               & F      & T               \\
+		F & F & T      & F               & T      & F
+	\end{array}
+\]
+
+Since the truth values of \eqref{ex23eq1} and \eqref{ex23eq2} agree for all possible combinations of truth values for $p$ and $q$, \eqref{ex23eq1} and \eqref{ex23eq2} are logically equivalent.
+
+\pagebreak
+\section{Exercise 24}
+$\neg (p \oplus q)$ is true when $p \oplus q$ is false, which means that $p$ and $q$ share the same truth value. This is exactly when $p \biconditional q$ is true. Hence, $\neg (p \oplus q)$ and $p \biconditional q$ are logically equivalent.
+
+\pagebreak
+\section{Exercise 25}
+$\neg (p \biconditional q)$ is true when $p \biconditional q$ is false, which means that $p$ and $q$ have different truth values. This is exactly when $\neg p \biconditional q$ is true. Hence, $\neg (p \biconditional q)$ and $\neg p \biconditional q$ are logically equivalent.
+
+\pagebreak
+\section{Exercise 26}
+$(p \conditional q) \land (p \conditional r)$ is true when both $(p \conditional q)$ and $(p \conditional r)$ are true, which means either $p = F$ or both $q = T$ and $r = T$. This is exactly when $p \conditional (q \land r)$ is true. Hence, $(p \conditional q) \land (p \conditional r)$ and $p \conditional (q \land r)$ are logically equivalent.
+
+\pagebreak
+\section{Exercise 27}
+$(p \conditional r) \land (q \conditional r)$ is true when both $(p \conditional r)$ and $(q \conditional r)$ are true, which means either $r = T$ or both $p = F$ and $q = F$. This is exactly when $(p \lor q) \conditional r$ is true. Hence, $(p \conditional r) \land (q \conditional r)$ and $(p \lor q) \conditional r$ are logically equivalent.
+
+\pagebreak
+\section{Exercise 28}
+$(p \conditional q) \lor (p \conditional r)$ is true when either $(p \conditional q)$ or $(p \conditional r)$ is true, which means either $p = F$, $q = T$, or $r = T$. This is exactly when $p \conditional (q \lor r)$ is true. Hence, $(p \conditional q) \lor (p \conditional r)$ and $p \conditional (q \lor r)$ are logically equivalent.
+
+\pagebreak
+\section{Exercise 29}
+$(p \conditional r) \lor (q \conditional r)$ is true when either $(p \conditional r)$ or $(q \conditional r)$ is true, which means either $p = F$, $q = F$, or $r = T$. This is exactly when $(p \land q) \conditional r$ is true. Hence, $(p \conditional r) \lor (q \conditional r)$ and $(p \land q) \conditional r$ are logically equivalent.
+
+\pagebreak
+\section{Exercise 30}
+$\neg p \conditional (q \conditional r)$ is true when either $\neg p$ is false or $(q \conditional r)$ is true, which means that either $p = T$, $q = F$, or $r = T$. This is exactly when $q \conditional (p \lor r)$ is true. Hence, $\neg p \conditional (q \conditional r)$ and $q \implies (p \lor r)$ are logically equivalent.
+
+\pagebreak
+\section{Exercise 31}
+$p \biconditional q$ is true when $p$ and $q$ share the same truth value. This is exactly when $(p \conditional q) \land (q \conditional p)$ is true. Hence, $p \biconditional q$ and $(p \conditional q) \land (q \conditional p)$ are logically equivalent.
+
+\pagebreak
+\section{Exercise 32}
+$p \biconditional q$ is true when $p$ and $q$ share the same truth value. This is exactly when $\neg p \biconditional \neg q$ is true. Hence, $p \biconditional q$ and $\neg p \biconditional \neg q$ are logically equivalent.
+
+\pagebreak
+\section{Exercise 34}
+\begin{align*}
+	(       & p \lor q) \land (\neg p \lor r) \conditional (q \lor r)                   & \equiv \\
+	\neg [( & p \lor q) \land (\neg p \lor r)] \lor (q \lor r)                          & \equiv \\
+	[\neg ( & p \lor q) \lor \neg (\neg p \lor r)] \lor (q \lor r)                      & \equiv \\
+	[(\neg  & p \land \neg q) \lor (p \land \neg r)] \lor (q \lor r)                    & \equiv \\
+	(\neg   & p \land \neg q) \lor [(q \lor r) \lor (p \land \neg r)]                   & \equiv \\
+	(\neg   & p \land \neg q) \lor [((q \lor r) \lor p) \land ((q \lor r) \lor \neg r)] & \equiv \\
+	(\neg   & p \land \neg q) \lor [((q \lor r) \lor p) \land T]                        & \equiv \\
+	((      & q \lor r) \lor p) \lor (\neg p \land \neg q)                              & \equiv \\
+	(((     & q \lor r) \lor p) \lor \neg p) \land (((q \lor r) \lor p) \lor \neg q)    & \equiv \\
+	        & T \land T                                                                 & \equiv \\
 	        & T
 \end{align*}
 
